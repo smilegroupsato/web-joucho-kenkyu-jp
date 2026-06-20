@@ -1,1 +1,1 @@
-redeploy after FTP_SERVER_DIR update: 2026-06-20
+redeploy after science updates: 2026-06-21 00:00 JST
