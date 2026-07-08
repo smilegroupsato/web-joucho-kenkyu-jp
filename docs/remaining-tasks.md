@@ -32,19 +32,29 @@ Notion公開キュー側で観測日時を確認できたら、各ページの `
 
 ## Old root public files
 
-旧root直下には、移行前の公開用HTML、CSS、カテゴリフォルダがまだ残っている。
+旧root直下に残っていた移行前の公開用HTML、CSS、カテゴリフォルダは削除済み。
 
-今回は破壊的操作を避けるため、旧root公開物の削除は未完了として保留した。
+削除対象は、`site/` 側に移行済みであることを確認できた旧公開物に限定した。
 
-ただし、GitHub Actions / FTP Deploy の公開対象は `local-dir: ./site/` であるため、旧root公開物は現時点ではWeb公開対象外である。
+削除済みの主な範囲：
 
-次回作業では、削除前に次を一覧化して手動承認を得る。
+- root `index.html`
+- root `.htaccess`
+- root `assets/style.css`
+- root `about/`
+- root `body/`
+- root `objects/`
+- root `meta/`
+- root `philosophy/`
+- root `science/`
+- root `time/`
+- root `night/`
+- root `records/`
+- root `relations/`
 
-- 削除候補パス一覧
-- `site/` 側に対応する移行済みパス
-- redirect が必要なもの
-- 削除せず保留すべきもの
-- 削除コマンド案
+Web公開対象は引き続き GitHub Actions / FTP Deploy の `local-dir: ./site/`。
+
+今後、旧root公開物が再発見された場合は、`site/` 側に対応する移行済みパスを確認してから削除する。
 
 ## Future categories
 
