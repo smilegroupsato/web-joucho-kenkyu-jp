@@ -84,7 +84,7 @@ h2 {
 
 .shelf-list a {
   display: grid;
-  grid-template-columns: minmax(7ch, 8ch) minmax(12ch, 18ch) 1fr;
+  grid-template-columns: minmax(7ch, 8ch) 26ch 1fr;
   column-gap: 24px;
   padding: 5px 0;
 }
@@ -99,6 +99,13 @@ h2 {
 .record-list {
   list-style: none;
   padding: 0;
+}
+
+.name,
+.record-title {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 .desc,
@@ -166,5 +173,12 @@ h2 {
   .record-title,
   .record-meta {
     min-width: 0;
+  }
+
+  .name,
+  .record-title {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 }
