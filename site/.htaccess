@@ -7,3 +7,6 @@
 </IfModule>
 
 FileETag None
+
+RedirectMatch 301 ^/night/?$ /time/night/
+RedirectMatch 301 ^/night/(.*)$ /time/night/$1

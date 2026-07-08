@@ -1,37 +1,95 @@
-# REPOSITORY_CONTEXT｜情緒研究Web
+# REPOSITORY_CONTEXT.md
 
-このリポジトリは、`joucho-kenkyu.jp` の公開用静的HTML/CSSと運用文書を管理する正本リポジトリである。
+Repository:
+`smilegroupsato/web-joucho-kenkyu-jp`
 
-## 構成
+Public site:
+<https://joucho-kenkyu.jp/>
+
+Project:
+情緒研究 / JOUCHO ARCHIVE
+
+## Role
+
+このリポジトリは、情緒研究 Web の公開実装を保持する場所である。
+
+Notion は素材・公開キューの正本、GitHub はHTML/CSSとして公開される実装正本として扱う。
+
+## Thought
+
+情緒研究は、意味になる前、意味になった後、そしてその前後が撹乱される地点に立ち上がる気配を観測し、並べ、あとから再び触れられる形にするためのアーカイブである。
+
+ここで扱うページは、ブログ記事ではなく、棚に置かれる観測記録、標本、目録項目として扱う。
+
+## Directory Structure
 
 ```text
 /
-├─ site/                 # Web公開対象
-├─ docs/                 # 運用文書
-├─ README.md             # 概要
-├─ AGENTS.md             # 作業指示
-└─ REPOSITORY_CONTEXT.md # リポジトリ文脈
+├─ site/                  Web公開対象
+│  ├─ index.html
+│  ├─ .htaccess
+│  ├─ assets/
+│  ├─ about/
+│  ├─ records/
+│  ├─ philosophy/
+│  ├─ time/
+│  ├─ objects/
+│  ├─ science/
+│  ├─ relations/
+│  ├─ body/
+│  ├─ narrative/
+│  └─ meta/
+├─ docs/                  運用文書
+├─ README.md
+├─ AGENTS.md
+└─ REPOSITORY_CONTEXT.md
 ```
 
-## 公開対象
+Web公開対象は `site/` 以下のみ。ルート直下に旧公開用HTMLやカテゴリフォルダを戻さない。
 
-Web公開対象は `site/` 以下のみ。
+## Deploy Policy
 
-GitHub Actions のFTP Deployは、原則として `local-dir: ./site/` を使う。
+GitHub Actions / FTP Deploy は `local-dir: ./site/` を公開対象にする。
 
-## 基本方針
+`docs/`、`README.md`、`AGENTS.md`、`REPOSITORY_CONTEXT.md` は公開対象ではない。
 
-情緒研究は、論考サイトではなく観測記録アーカイブである。
+## Classification
 
-観測記録は、記事ではなく、棚・標本・目録として扱う。
+```text
+00 records/      観測記録・案内・台帳
+10 philosophy/   哲学・神学・宗教
+11 time/         時間・時間帯・生活リズム
+20 objects/      物・記録・メディア
+30 liminal/      空間・無人性・境界
+40 names/        薬名・商品名・言葉の響き
+50 culture/      レイヴ・未参加文化・記録物
+60 science/      科学概念・AI・数学
+70 relations/    関係
+80 body/         身体・欲望・疲労・病・老い・死
+90 narrative/    物語・神話・小説・漫画・映画
+99 meta/         情緒について考えるときにだけ立ち現れる情緒
+```
 
-黒背景、モノスペース、軽量HTML/CSSを維持する。
+分類は、題材名ではなく、情緒がどこで発生しているかで決める。
 
-## 重要ルール
+## Writing and Display Rules
 
-- GitHubに反映していないものを公開済みと言わない。
-- Notionを更新していないものを Notion反映済みと言わない。
-- HTMLコード自体を本文として掲載する場合は必ずエスケープする。
-- 観測終了はCSSで自動付与せず、本文の一部として入れる。
-- 観測記録を「——観測終了。」で締める場合は、本文末尾の前に一行空けて置く。
-- 既存URLは可能な限り壊さない。
+- 軽量なHTML/CSSで書く。
+- terminal / archive 風の黒背景と monospace を基本にする。
+- 観測記録は説明しすぎず、本文の余白を残す。
+- 「——観測終了。」はCSS自動挿入ではなく本文に入れる。
+- HTMLコードそのものを本文として表示する場合は、必ずHTMLエスケープする。
+- 観測記録ページには、判明している範囲で `observed:` を入れる。
+- 日時が不明な場合は推測で補わず、`docs/remaining-tasks.md` に残す。
+
+## URL Policy
+
+既存URLはできるだけ維持する。
+
+旧ルート公開ファイルを `site/` に統合する場合も、公開URLとしてのパスが維持されるように配置する。URL変更が必要な場合は、`site/.htaccess` にリダイレクトを置く。
+
+## Repository Context Boundary
+
+このリポジトリは、情緒研究 Web 固有の分類、文体、公開フローを持つ。
+
+別プロジェクトの文書構成やテーマ切替、デプロイ前提を流用しない。汎用化できる知見は、プロジェクト固有ルールと分けて記録する。
