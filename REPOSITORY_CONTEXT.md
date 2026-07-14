@@ -58,13 +58,13 @@ GitHub Actions / FTP Deploy は `local-dir: ./site/` を公開対象にする。
 
 ```text
 00 records/      観測記録・案内・台帳
-08 technology/   技術の情緒（計算機・コマンド・規格・インターフェース）
 10 philosophy/   哲学・神学・宗教
 11 time/         時間・時間帯・生活リズム
 20 objects/      物・記録・メディア
 30 liminal/      空間・無人性・境界
 40 names/        薬名・商品名・言葉の響き
 50 culture/      レイヴ・未参加文化・記録物
+55 technology/   技術の情緒（計算機・コマンド・規格・インターフェース）
 60 science/      科学概念・AI・数学
 70 relations/    関係
 80 body/         身体・欲望・疲労・病・老い・死
