@@ -8,11 +8,26 @@ on:
 
 jobs:
   deploy:
-    name: Deploy website
+    name: Build site tree and deploy website
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Test SGOS site tree generator
+        run: python -m unittest discover -s tests -v
+
+      - name: Build SGOS site tree
+        run: python scripts/build_sgos_site_tree.py
+
+      - name: Validate generated JSON
+        run: python -m json.tool site/sgos-site-tree.json > /dev/null
+
       - name: Sync files to Lolipop
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
