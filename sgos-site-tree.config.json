@@ -5,7 +5,8 @@
   "site_url": "https://joucho-kenkyu.jp/",
   "source_dir": "site",
   "exclude_paths": [
-    "sgos-site-tree.json"
+    "sgos-site-tree.json",
+    "philosophy/dataism-naigawa-no-shukyo.html"
   ],
   "sections": [
     {
