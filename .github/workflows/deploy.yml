@@ -1,18 +1,61 @@
-name: Deploy to Lolipop FTP
+name: Verify and deploy to Lolipop FTP
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  deploy:
-    name: Deploy website
+  verify:
+    name: Verify website and SGOS site tree
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Test SGOS site tree generator
+        run: python -m unittest discover -s tests -v
+
+      - name: Build SGOS site tree
+        run: python scripts/build_sgos_site_tree.py
+
+      - name: Validate generated JSON
+        run: python -m json.tool site/sgos-site-tree.json > /dev/null
+
+      - name: Upload generated site tree
+        uses: actions/upload-artifact@v4
+        with:
+          name: sgos-site-tree
+          path: site/sgos-site-tree.json
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    name: Deploy website
+    needs: verify
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build SGOS site tree
+        run: python scripts/build_sgos_site_tree.py
+
       - name: Sync files to Lolipop
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

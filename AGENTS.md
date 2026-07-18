@@ -22,6 +22,7 @@ Codex / AI 作業者は、このリポジトリで作業する前に、対象リ
 - 新規HTML、CSS、画像などの公開物は `site/` 以下に置く。
 - ルート直下に公開用 `index.html` やカテゴリフォルダを作らない。
 - `docs/`、`README.md`、`AGENTS.md`、`REPOSITORY_CONTEXT.md` は公開対象ではない。
+- `site/sgos-site-tree.json` は公開時に自動生成する。手作業で正本化しない。
 
 ## Publish Workflow
 
@@ -32,7 +33,11 @@ Codex / AI 作業者は、このリポジトリで作業する前に、対象リ
 5. 必要なら `site/index.html` の `newly cataloged` を更新する。
 6. 可能な範囲で観測日時 `observed:` を表示する。
 7. リンク切れと相対パスを確認する。
-8. Notionを実際に更新した場合だけ、Notion反映済みとして報告する。
+8. `python -m unittest discover -s tests -v` を実行する。
+9. `python scripts/build_sgos_site_tree.py` を実行し、`site/sgos-site-tree.json` が生成されることを確認する。
+10. Notionを実際に更新した場合だけ、Notion反映済みとして報告する。
+
+GitHub Actionsでは、テストとサイトツリー生成に失敗した場合、FTP公開を実行しない。
 
 ## Category Updates
 
@@ -42,6 +47,7 @@ Codex / AI 作業者は、このリポジトリで作業する前に、対象リ
 - `site/about/index.html`
 - 各カテゴリindex
 - `docs/classification.md`
+- `sgos-site-tree.config.json`
 
 ## Rules
 
@@ -53,6 +59,7 @@ Codex / AI 作業者は、このリポジトリで作業する前に、対象リ
 - HTMLコード自体を本文として表示するページでは、必ずHTMLエスケープする。
 - 「——観測終了。」はCSS自動挿入ではなく本文に入れる。
 - `observed:` は推測で入れない。
+- `sgos-site-tree.config.json` の表示順・棚名は、公開サイトの分類と一致させる。
 - force push は使用しない。
 
 ## Mobile Check

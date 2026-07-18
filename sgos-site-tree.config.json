@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "site_id": "joucho-kenkyu-jp",
+  "site_title": "情緒研究 / JOUCHO ARCHIVE",
+  "site_url": "https://joucho-kenkyu.jp/",
+  "source_dir": "site",
+  "exclude_paths": [
+    "sgos-site-tree.json",
+    "philosophy/dataism-naigawa-no-shukyo.html"
+  ],
+  "sections": [
+    {
+      "slug": "records",
+      "title": "00 records / 観測記録・案内・台帳"
+    },
+    {
+      "slug": "philosophy",
+      "title": "10 philosophy / 哲学・神学・宗教"
+    },
+    {
+      "slug": "time",
+      "title": "11 time / 時間・時間帯・生活リズム"
+    },
+    {
+      "slug": "objects",
+      "title": "20 objects / 物・記録・メディア"
+    },
+    {
+      "slug": "liminal",
+      "title": "30 liminal / 空間・無人性・境界"
+    },
+    {
+      "slug": "names",
+      "title": "40 names / 薬名・商品名・言葉の響き"
+    },
+    {
+      "slug": "culture",
+      "title": "50 culture / レイヴ・未参加文化・記録物"
+    },
+    {
+      "slug": "technology",
+      "title": "55 technology / 技術の情緒"
+    },
+    {
+      "slug": "science",
+      "title": "60 science / 科学概念・AI・数学"
+    },
+    {
+      "slug": "relations",
+      "title": "70 relations / 関係"
+    },
+    {
+      "slug": "body",
+      "title": "80 body / 身体・欲望・疲労・病・老い・死"
+    },
+    {
+      "slug": "narrative",
+      "title": "90 narrative / 物語・神話・小説・漫画・映画"
+    },
+    {
+      "slug": "meta",
+      "title": "99 meta / 情緒について考えるときにだけ立ち現れる情緒"
+    },
+    {
+      "slug": "about",
+      "title": "about / 情緒研究について"
+    }
+  ]
+}
