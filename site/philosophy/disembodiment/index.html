@@ -6,6 +6,32 @@
   <title>脱身体の思想史｜情緒研究</title>
   <meta name="description" content="身体から出たい精神。情緒研究シリーズ『脱身体の思想史』の概要・目次・見取り図を置く親ページ。">
   <link rel="stylesheet" href="../../assets/style.css?v=20260623-3">
+  <style>
+    .series-index { border: 1px solid var(--line, #315b3d); padding: .9rem 1rem; }
+    .series-item { display: grid; grid-template-columns: 4.2rem minmax(10rem, 14rem) minmax(10rem, 1fr); column-gap: 1rem; row-gap: .2rem; padding: .7rem 0; border-bottom: 1px solid rgba(99, 255, 140, .16); align-items: baseline; }
+    .series-item:last-child { border-bottom: 0; }
+    .series-number, .series-en { color: var(--muted, #a8b8aa); }
+    .series-title a { color: var(--green, #68ff8d); }
+    .series-subtitle { grid-column: 2 / 4; color: var(--text, #d7e0d8); padding-left: 0; }
+    .map-grid { border: 1px solid var(--line, #315b3d); overflow: hidden; }
+    .map-row { display: grid; grid-template-columns: 4.5rem minmax(9rem, 12rem) minmax(12rem, 1fr) minmax(12rem, 1fr); }
+    .map-row > * { padding: .65rem .75rem; border-right: 1px solid rgba(99, 255, 140, .16); border-bottom: 1px solid rgba(99, 255, 140, .16); }
+    .map-row > *:last-child { border-right: 0; }
+    .map-row:last-child > * { border-bottom: 0; }
+    .map-head { color: var(--green, #68ff8d); font-weight: 700; }
+    .map-title a { color: var(--green, #68ff8d); }
+    @media (max-width: 760px) {
+      .series-item { grid-template-columns: 3.8rem 1fr; column-gap: .7rem; }
+      .series-en { grid-column: 2; }
+      .series-title { grid-column: 2; }
+      .series-subtitle { grid-column: 2; }
+      .map-head { display: none; }
+      .map-row { grid-template-columns: 4rem 1fr; padding: .7rem 0; border-bottom: 1px solid rgba(99, 255, 140, .16); }
+      .map-row:last-child { border-bottom: 0; }
+      .map-row > * { border: 0; padding: .2rem .75rem; }
+      .map-number { grid-row: 1 / 4; }
+    }
+  </style>
 </head>
 <body>
   <main class="terminal">
@@ -43,66 +69,39 @@
       <section class="panel">
         <h2>目次</h2>
         <p class="prompt">observer@joucho:~/philosophy/disembodiment$ ls</p>
-        <pre class="code-block" aria-label="脱身体の思想史 目次">12.00  Disembodiment             脱身体の思想史
-        身体から出たい精神
-
-<a href="ancient.html">12.01  Ancient Philosophy         古代
-        魂は身体に妨げられている</a>
-
-<a href="gnosticism.html">12.02  Gnosticism                 宗教・グノーシス
-        物質世界は牢獄である</a>
-
-<a href="asceticism.html">12.03  Asceticism                 禁欲・修行
-        身体を捨てずに、身体を従わせる</a>
-
-<a href="psychedelic-mysticism.html">12.04  Psychedelic Mysticism      サイケデリック神秘学
-        身体境界が溶ける脱身体</a>
-
-<a href="descartes.html">12.05  Descartes                  デカルト
-        私は身体ではなく、考えるものである</a>
-
-<a href="brain-in-a-vat.html">12.06  Brain in a Vat             水槽の脳
-        身体を取り外しても経験は続くのか</a>
-
-<a href="russian-cosmism.html">12.07  Russian Cosmism            ロシア宇宙主義
-        死を技術で廃止する</a>
-
-<a href="transhumanism.html">12.08  Transhumanism              トランスヒューマニズム
-        人間はアップグレード可能である</a>
-
-<a href="mind-uploading.html">12.09  Mind Uploading             マインドアップロード
-        人格は移植できるのか</a>
-
-<a href="dataism.html">12.10  Dataism                    データ主義
-        身体ではなく、情報として存在する</a>
-
-<a href="simulation-hypothesis.html">12.11  Simulation Hypothesis      シミュレーション仮説
-        そもそも世界が情報かもしれない</a>
-
-<a href="embodied-cognition.html">12.12  Embodied Cognition         身体性認知・現象学
-        身体こそ意味の発生源</a></pre>
+        <div class="series-index" aria-label="脱身体の思想史 目次">
+          <div class="series-item"><span class="series-number">12.00</span><span class="series-en">Disembodiment</span><span class="series-title">脱身体の思想史</span><span class="series-subtitle">身体から出たい精神</span></div>
+          <div class="series-item"><span class="series-number">12.01</span><span class="series-en">Ancient Philosophy</span><span class="series-title"><a href="ancient.html">古代</a></span><span class="series-subtitle">魂は身体に妨げられている</span></div>
+          <div class="series-item"><span class="series-number">12.02</span><span class="series-en">Gnosticism</span><span class="series-title"><a href="gnosticism.html">宗教・グノーシス</a></span><span class="series-subtitle">物質世界は牢獄である</span></div>
+          <div class="series-item"><span class="series-number">12.03</span><span class="series-en">Asceticism</span><span class="series-title"><a href="asceticism.html">禁欲・修行</a></span><span class="series-subtitle">身体を捨てずに、身体を従わせる</span></div>
+          <div class="series-item"><span class="series-number">12.04</span><span class="series-en">Psychedelic Mysticism</span><span class="series-title"><a href="psychedelic-mysticism.html">サイケデリック神秘学</a></span><span class="series-subtitle">身体境界が溶ける脱身体</span></div>
+          <div class="series-item"><span class="series-number">12.05</span><span class="series-en">Descartes</span><span class="series-title"><a href="descartes.html">デカルト</a></span><span class="series-subtitle">私は身体ではなく、考えるものである</span></div>
+          <div class="series-item"><span class="series-number">12.06</span><span class="series-en">Brain in a Vat</span><span class="series-title"><a href="brain-in-a-vat.html">水槽の脳</a></span><span class="series-subtitle">身体を取り外しても経験は続くのか</span></div>
+          <div class="series-item"><span class="series-number">12.07</span><span class="series-en">Russian Cosmism</span><span class="series-title"><a href="russian-cosmism.html">ロシア宇宙主義</a></span><span class="series-subtitle">死を技術で廃止する</span></div>
+          <div class="series-item"><span class="series-number">12.08</span><span class="series-en">Transhumanism</span><span class="series-title"><a href="transhumanism.html">トランスヒューマニズム</a></span><span class="series-subtitle">人間はアップグレード可能である</span></div>
+          <div class="series-item"><span class="series-number">12.09</span><span class="series-en">Mind Uploading</span><span class="series-title"><a href="mind-uploading.html">マインドアップロード</a></span><span class="series-subtitle">人格は移植できるのか</span></div>
+          <div class="series-item"><span class="series-number">12.10</span><span class="series-en">Dataism</span><span class="series-title"><a href="dataism.html">データ主義</a></span><span class="series-subtitle">身体ではなく、情報として存在する</span></div>
+          <div class="series-item"><span class="series-number">12.11</span><span class="series-en">Simulation Hypothesis</span><span class="series-title"><a href="simulation-hypothesis.html">シミュレーション仮説</a></span><span class="series-subtitle">そもそも世界が情報かもしれない</span></div>
+          <div class="series-item"><span class="series-number">12.12</span><span class="series-en">Embodied Cognition</span><span class="series-title"><a href="embodied-cognition.html">身体性認知・現象学</a></span><span class="series-subtitle">身体こそ意味の発生源</span></div>
+        </div>
       </section>
 
       <section class="panel">
         <h2>全体の見取り図</h2>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>番号</th><th>系譜</th><th>脱身体の形</th><th>中心情緒</th></tr></thead>
-            <tbody>
-              <tr><td><a href="ancient.html">12.01</a></td><td><a href="ancient.html">古代</a></td><td>身体から魂を解放する</td><td>身体は真理の邪魔</td></tr>
-              <tr><td><a href="gnosticism.html">12.02</a></td><td><a href="gnosticism.html">宗教・グノーシス</a></td><td>物質世界から神的火花を救う</td><td>世界そのものが牢獄</td></tr>
-              <tr><td><a href="asceticism.html">12.03</a></td><td><a href="asceticism.html">禁欲・修行</a></td><td>身体を制御する</td><td>欲望を静めたい</td></tr>
-              <tr><td><a href="psychedelic-mysticism.html">12.04</a></td><td><a href="psychedelic-mysticism.html">サイケデリック神秘学</a></td><td>身体境界・自己境界が溶ける</td><td>私という輪郭を失いたい／世界と一体化したい</td></tr>
-              <tr><td><a href="descartes.html">12.05</a></td><td><a href="descartes.html">近代認識論</a></td><td>私を思考として捉える</td><td>身体より意識が本質</td></tr>
-              <tr><td><a href="brain-in-a-vat.html">12.06</a></td><td><a href="brain-in-a-vat.html">外界懐疑</a></td><td>脳だけで経験する</td><td>身体なしでも世界は続くか</td></tr>
-              <tr><td><a href="russian-cosmism.html">12.07</a></td><td><a href="russian-cosmism.html">死への反逆</a></td><td>死を技術で廃止する</td><td>老いと死は宿命ではない</td></tr>
-              <tr><td><a href="transhumanism.html">12.08</a></td><td><a href="transhumanism.html">技術未来論</a></td><td>人間を拡張する</td><td>身体は暫定仕様</td></tr>
-              <tr><td><a href="mind-uploading.html">12.09</a></td><td><a href="mind-uploading.html">情報的自己同一性</a></td><td>人格を情報として移す</td><td>私はコピー可能か</td></tr>
-              <tr><td><a href="dataism.html">12.10</a></td><td><a href="dataism.html">データ主義</a></td><td>人間をログと情報流にする</td><td>身体より履歴が私を語る</td></tr>
-              <tr><td><a href="simulation-hypothesis.html">12.11</a></td><td><a href="simulation-hypothesis.html">シミュレーション仮説</a></td><td>世界全体を情報処理として見る</td><td>現実の外側があるか</td></tr>
-              <tr><td><a href="embodied-cognition.html">12.12</a></td><td><a href="embodied-cognition.html">身体性認知・現象学</a></td><td>脱身体を批判する</td><td>身体こそ意味の発生源</td></tr>
-            </tbody>
-          </table>
+        <div class="map-grid" role="table" aria-label="脱身体の思想史 全体の見取り図">
+          <div class="map-row map-head" role="row"><span>番号</span><span>系譜</span><span>脱身体の形</span><span>中心情緒</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.01</span><span class="map-title"><a href="ancient.html">古代</a></span><span>身体から魂を解放する</span><span>身体は真理の邪魔</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.02</span><span class="map-title"><a href="gnosticism.html">宗教・グノーシス</a></span><span>物質世界から神的火花を救う</span><span>世界そのものが牢獄</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.03</span><span class="map-title"><a href="asceticism.html">禁欲・修行</a></span><span>身体を制御する</span><span>欲望を静めたい</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.04</span><span class="map-title"><a href="psychedelic-mysticism.html">サイケデリック神秘学</a></span><span>身体境界・自己境界が溶ける</span><span>私という輪郭を失いたい／世界と一体化したい</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.05</span><span class="map-title"><a href="descartes.html">近代認識論</a></span><span>私を思考として捉える</span><span>身体より意識が本質</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.06</span><span class="map-title"><a href="brain-in-a-vat.html">外界懐疑</a></span><span>脳だけで経験する</span><span>身体なしでも世界は続くか</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.07</span><span class="map-title"><a href="russian-cosmism.html">死への反逆</a></span><span>死を技術で廃止する</span><span>老いと死は宿命ではない</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.08</span><span class="map-title"><a href="transhumanism.html">技術未来論</a></span><span>人間を拡張する</span><span>身体は暫定仕様</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.09</span><span class="map-title"><a href="mind-uploading.html">情報的自己同一性</a></span><span>人格を情報として移す</span><span>私はコピー可能か</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.10</span><span class="map-title"><a href="dataism.html">データ主義</a></span><span>人間をログと情報流にする</span><span>身体より履歴が私を語る</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.11</span><span class="map-title"><a href="simulation-hypothesis.html">シミュレーション仮説</a></span><span>世界全体を情報処理として見る</span><span>現実の外側があるか</span></div>
+          <div class="map-row" role="row"><span class="map-number">12.12</span><span class="map-title"><a href="embodied-cognition.html">身体性認知・現象学</a></span><span>脱身体を批判する</span><span>身体こそ意味の発生源</span></div>
         </div>
       </section>
 
