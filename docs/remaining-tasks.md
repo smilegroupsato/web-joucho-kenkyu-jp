@@ -60,8 +60,7 @@ Web公開対象は引き続き GitHub Actions / FTP Deploy の `local-dir: ./sit
 
 次の棚は分類として定義されているが、現時点では独立カテゴリページを持たない。
 
-- `30 liminal/`
 - `40 names/`
 - `50 culture/`
 
-トップページと `about/` ではアンカーまたは予定棚として扱っている。実ページ化する場合は、`site/index.html`、`site/about/index.html`、`docs/classification.md` を同期する。
+`30 liminal/` は `site/liminal/` として実ページ化済み。`40 names/` と `50 culture/` は、トップページと `about/` ではアンカーまたは予定棚として扱っている。実ページ化する場合は、`site/index.html`、`site/about/index.html`、`docs/classification.md` を同期する。
