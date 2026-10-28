@@ -33,6 +33,7 @@ Notion は素材・公開キューの正本、GitHub はHTML/CSSとして公開�
 │  ├─ records/
 │  ├─ technology/
 │  ├─ philosophy/
+│  ├─ memory/
 │  ├─ time/
 │  ├─ objects/
 │  ├─ science/
@@ -60,6 +61,8 @@ GitHub Actions / FTP Deploy は `local-dir: ./site/` を公開対象にする。
 00 records/      観測記録・案内・台帳
 10 philosophy/   哲学・神学・宗教
 11 time/         時間・時間帯・生活リズム
+12 philosophy/disembodiment/ 身体から出たい身体・脱身体の情緒史
+13 memory/       時間・記憶・可能性
 20 objects/      物・記録・メディア
 30 liminal/      空間・無人性・境界
 40 names/        薬名・商品名・言葉の響き
